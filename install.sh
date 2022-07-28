@@ -23,5 +23,20 @@ git submodule update --init --recursive
 meson --buildtype=release . build
 ninja -C build
 sudo ninja -C build install
+cd ..
+
+# build dwm
+cd dwm/
+sudo make clean install
+cd ..
+# build dmenu
+cd dmenu/
+sudo make clean install
+# build st
+cd st/
+sudo make clean install
+# build slock
+cd slock
+sudo make clean install
 
 cd
