@@ -16,4 +16,12 @@ git clone https://git.suckless.org/dmenu
 git clone https://git.suckless.org/slock
 
 git clone https://github.com/bakkeby/dwm-flexipatch.git
+
 git clone https://github.com/yshui/picom.git
+cd picom
+git submodule update --init --recursive
+meson --buildtype=release . build
+ninja -C build
+ninja -C build install
+
+cd
